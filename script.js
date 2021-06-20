@@ -17,3 +17,9 @@ let targetNumbers = generateTarget();
 
 const compareGuesses = (humanGuess, computerGuess, targetNumbers) => 
     Math.abs(targetNumbers - humanGuess) <= Math.abs(targetNumbers - computerGuess) ? true : false;
+
+let winner =  compareGuesses(humanGuess, computerGuess, targetNumbers) ? 'human' : 'computer';
+      
+const updateScore = (winner) => 
+    winner === 'human' ?
+        humanScore++ : computerScore++;
