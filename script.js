@@ -23,3 +23,7 @@ let winner =  compareGuesses(humanGuess, computerGuess, targetNumbers) ? 'human'
 const updateScore = (winner) => 
     winner === 'human' ?
         humanScore++ : computerScore++;
+
+const advanceRound = () => {
+    return currentRoundNumber ++;
+};
